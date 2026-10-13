@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stock Trading – Learn the Stock Market the Right Way</title>
+  <meta name="description" content="Stock Trading is an educational platform helping you learn the stock market through structured lessons, practical guidance, and disciplined learning. Join today!"/>
+  <meta name="keywords" content="stock market education, stock market learning, trading course India, Navi Mumbai, technical analysis, risk management education"/>
+  <meta name="author" content="Stock Trading"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.stocktrading.in/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Stock Trading – Learn the Stock Market the Right Way"/>
+  <meta property="og:description" content="Structured education, practical guidance, and disciplined learning for every stage of your market journey."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.stocktrading.in/"/>
+  <meta property="og:locale" content="en_IN"/>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Stock Trading",
+    "description": "Stock market educational platform in Navi Mumbai",
+    "url": "https://www.stocktrading.in",
+    "telephone": "+911234567890",
+    "email": "info@stockmarket.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Vashi",
+      "addressLocality": "Navi Mumbai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400703",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader-logo">Stock <span>Trading</span></div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- Custom Cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-logo" aria-label="Stock Trading Home">
+      <div class="nav-logo-icon">📈</div>
+      <span class="nav-logo-text">Stock <span>Trading</span></span>
+    </a>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" role="menubar">
+      <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+      <li role="none"><a href="services.html" role="menuitem">Our Services</a></li>
+      <li role="none"><a href="pricing.html" role="menuitem">Pricing Plan</a></li>
+      <li role="none"><a href="about.html" role="menuitem">About Us</a></li>
+      <li role="none"><a href="contact.html" role="menuitem">Contact Us</a></li>
+      <li role="none"><a href="user-agreement.html" role="menuitem" class="nav-cta">User Agreement</a></li>
+    </ul>
+  </div>
+  <div class="nav-overlay"></div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="home" aria-label="Hero section">
+  <div class="hero-bg">
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    <svg class="hero-chart-lines" aria-hidden="true"></svg>
+  </div>
+
+  <!-- Stock Ticker -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div style="display:flex;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;overflow:hidden;">
+      <div class="live-badge"><span class="live-dot"></span> Live</div>
+      <div class="ticker-track">
+        <span class="ticker-item"><span class="sym">NIFTY 50</span> <span class="up">▲ 22,456.35 +0.84%</span></span>
+        <span class="ticker-item"><span class="sym">BANK NIFTY</span> <span class="up">▲ 48,230.10 +1.12%</span></span>
+        <span class="ticker-item"><span class="sym">SENSEX</span> <span class="dn">▼ 73,887.40 -0.21%</span></span>
+        <span class="ticker-item"><span class="sym">RELIANCE</span> <span class="up">▲ 2,890.55 +0.67%</span></span>
+        <span class="ticker-item"><span class="sym">TCS</span> <span class="dn">▼ 3,720.00 -0.43%</span></span>
+        <span class="ticker-item"><span class="sym">HDFC BANK</span> <span class="up">▲ 1,640.75 +0.91%</span></span>
+        <span class="ticker-item"><span class="sym">INFOSYS</span> <span class="up">▲ 1,570.20 +1.05%</span></span>
+        <span class="ticker-item"><span class="sym">WIPRO</span> <span class="dn">▼ 490.00 -0.30%</span></span>
+        <span class="ticker-item"><span class="sym">ITC</span> <span class="up">▲ 445.60 +0.55%</span></span>
+        <span class="ticker-item"><span class="sym">BAJAJ FINANCE</span> <span class="up">▲ 7,012.80 +0.78%</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="padding-bottom:80px;">
+    <div class="hero-content">
+      <div class="hero-badge" data-aos="fade-up" data-aos-delay="100">
+        <span class="dot"></span>
+        India's Trusted Stock Market Education Platform
+      </div>
+      <h1 data-aos="fade-up" data-aos-delay="200">
+        Learn the Stock Market<br><span class="highlight">the Right Way</span>
+      </h1>
+      <p class="hero-desc" data-aos="fade-up" data-aos-delay="300">
+        Structured education, practical guidance, and disciplined learning for every stage of your market journey.
+      </p>
+      <div class="hero-btns" data-aos="fade-up" data-aos-delay="400">
+        <a href="pricing.html" class="btn btn-primary">
+          <span>📊</span> View Pricing Plan
+        </a>
+        <a href="contact.html" class="btn btn-outline">
+          <span>💬</span> Contact Us
+        </a>
+      </div>
+
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+        <div class="hero-stat">
+          <h3><span data-counter data-target="5000" data-suffix="+">5000+</span></h3>
+          <p>Learners Enrolled</p>
+        </div>
+        <div class="hero-stat">
+          <h3><span data-counter data-target="6" data-suffix="">6</span></h3>
+          <p>Learning Modules</p>
+        </div>
+        <div class="hero-stat">
+          <h3><span data-counter data-target="3" data-suffix="">3</span></h3>
+          <p>Flexible Plans</p>
+        </div>
+        <div class="hero-stat">
+          <h3><span data-counter data-target="98" data-suffix="%">98%</span></h3>
+          <p>Satisfaction Rate</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== QUICK SERVICE CARDS ==================== -->
+<section style="padding: 70px 0; background: linear-gradient(135deg,#0d1421 0%,#111827 100%);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-icon">📚</div>
+        <h3>Stock Market Learning</h3>
+        <p>Simple lessons that take you from market basics to confident understanding.</p>
+      </div>
+
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-icon">🎧</div>
+        <h3>Learning Support</h3>
+        <p>Quick help for your doubts through email and chat support.</p>
+      </div>
+
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-icon">📉</div>
+        <h3>Market Strategy</h3>
+        <p>Learn how experienced traders plan and manage their trades.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY CHOOSE US ==================== -->
+<section class="why-section" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-aos="fade-up">Our Advantages</div>
+      <h2 id="why-heading" data-aos="fade-up" data-aos-delay="100">Why Choose <span class="highlight">Stock Trading</span></h2>
+      <p data-aos="fade-up" data-aos-delay="200">Education that is simple, practical, and built around discipline.</p>
+    </div>
+    <div class="why-grid">
+
+      <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-number">01</div>
+        <h4><span class="check-icon">✓</span> Beginner-Friendly Learning</h4>
+        <p>Every lesson is explained in simple language so anyone can start easily.</p>
+      </div>
+
+      <div class="why-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="why-number">02</div>
+        <h4><span class="check-icon">✓</span> Structured Learning Path</h4>
+        <p>Move step by step from basics to advanced concepts without confusion.</p>
+      </div>
+
+      <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="why-number">03</div>
+        <h4><span class="check-icon">✓</span> Practical Examples</h4>
+        <p>Understand concepts through real market examples instead of only theory.</p>
+      </div>
+
+      <div class="why-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="why-number">04</div>
+        <h4><span class="check-icon">✓</span> Dedicated Support</h4>
+        <p>Get your questions answered quickly through email and chat support.</p>
+      </div>
+
+      <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-number">05</div>
+        <h4><span class="check-icon">✓</span> Risk-First Approach</h4>
+        <p>We teach capital protection and risk control before anything else.</p>
+      </div>
+
+      <div class="why-card" data-aos="fade-up" data-aos-delay="350">
+        <div class="why-number">06</div>
+        <h4><span class="check-icon">✓</span> Transparent Pricing</h4>
+        <p>Clear plans with clearly listed benefits and no hidden charges.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== OUR SERVICES ==================== -->
+<section aria-labelledby="services-heading" style="background: var(--bg-dark);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-aos="fade-up">What We Teach</div>
+      <h2 id="services-heading" data-aos="fade-up" data-aos-delay="100">Our Learning <span class="highlight">Services</span></h2>
+      <p data-aos="fade-up" data-aos-delay="200">Everything you need to learn the stock market with clarity and confidence.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-icon">📚</div>
+        <h3>Stock Market Learning</h3>
+        <div class="subheading">Build Your Foundation</div>
+        <p>Learn market basics, trading terms, and chart reading through simple lessons designed for complete beginners.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="card-icon">🎧</div>
+        <h3>Learning Support</h3>
+        <div class="subheading">Guidance When You Need It</div>
+        <p>Get your doubts cleared quickly through email and chat support from our dedicated learning team.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-icon">💼</div>
+        <h3>Portfolio Learning Sessions</h3>
+        <div class="subheading">Understand Portfolio Building</div>
+        <p>Understand how portfolios are structured, diversified, and reviewed through guided educational sessions with practical examples.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="card-icon">🎯</div>
+        <h3>Market Strategy</h3>
+        <div class="subheading">Learn How Strategies Work</div>
+        <p>Study popular trading approaches and understand how experienced traders plan entries, exits, and market scenarios.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-icon">📊</div>
+        <h3>Technical Analysis Learning</h3>
+        <div class="subheading">Read Charts With Confidence</div>
+        <p>Learn candlesticks, support and resistance, trends, and indicators to analyse price movement more clearly.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="350">
+        <div class="card-icon">🛡️</div>
+        <h3>Risk Management Education</h3>
+        <div class="subheading">Protect Your Capital</div>
+        <p>Learn position sizing, capital protection, and money management habits that help you trade with discipline.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section class="testimonials-section" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-aos="fade-up">Learner Reviews</div>
+      <h2 id="testimonials-heading" data-aos="fade-up" data-aos-delay="100">What Our <span class="highlight">Learners Say</span></h2>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-quote">"</div>
+        <div class="star-rating">★★★★★</div>
+        <p class="testimonial-text">The lessons are simple and well organised. I finally understand how charts and market structure work.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div>
+            <div class="author-name">Rahul S.</div>
+            <div class="author-location">Mumbai</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="testimonial-quote">"</div>
+        <div class="star-rating">★★★★★</div>
+        <p class="testimonial-text">Support team replies quickly and clears every doubt patiently. Learning feels very comfortable here.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">P</div>
+          <div>
+            <div class="author-name">Priya M.</div>
+            <div class="author-location">Pune</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-quote">"</div>
+        <div class="star-rating">★★★★★</div>
+        <p class="testimonial-text">Portfolio learning sessions helped me understand diversification and how to review my own investments.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <div class="author-name">Amit K.</div>
+            <div class="author-location">Thane</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="testimonial-quote">"</div>
+        <div class="star-rating">★★★★★</div>
+        <p class="testimonial-text">I was a complete beginner. The step by step approach made everything easy to follow.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">N</div>
+          <div>
+            <div class="author-name">Neha R.</div>
+            <div class="author-location">Navi Mumbai</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-quote">"</div>
+        <div class="star-rating">★★★★★</div>
+        <p class="testimonial-text">Risk management lessons changed how I think about trading. Discipline matters more than I realised.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">S</div>
+          <div>
+            <div class="author-name">Sandeep P.</div>
+            <div class="author-location">Nashik</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="350">
+        <div class="testimonial-quote">"</div>
+        <div class="star-rating">★★★★★</div>
+        <p class="testimonial-text">Clear explanations, practical examples and friendly support. Highly recommended for new learners.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">F</div>
+          <div>
+            <div class="author-name">Farhan A.</div>
+            <div class="author-location">Mumbai</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-aos="fade-up">Got Questions?</div>
+      <h2 id="faq-heading" data-aos="fade-up" data-aos-delay="100">Frequently Asked <span class="highlight">Questions</span></h2>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="faq-question" role="button" aria-expanded="false">
+          Who can join Stock Trading?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer"><p>Anyone interested in learning the stock market can join, including complete beginners, students, and working professionals.</p></div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="120">
+        <div class="faq-question" role="button" aria-expanded="false">
+          Do I need prior market knowledge?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer"><p>No. Our lessons begin from the basics and gradually move towards advanced topics.</p></div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="140">
+        <div class="faq-question" role="button" aria-expanded="false">
+          Is this a guaranteed profit service?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer"><p>No. We provide education only. Markets carry risk and no profit or return is guaranteed.</p></div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="160">
+        <div class="faq-question" role="button" aria-expanded="false">
+          What are the package options?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer"><p>We offer three packages: Basic Package, Smart Package, and Premium Package. Please visit the <a href="pricing.html">Pricing Plan</a> page for details.</p></div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="180">
+        <div class="faq-question" role="button" aria-expanded="false">
+          How can I get support?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer"><p>You can reach us through email and chat. Premium members also get WhatsApp and priority call support.</p></div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="faq-question" role="button" aria-expanded="false">
+          Can I choose a package later or upgrade it?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer"><p>Yes. You can contact our team anytime to upgrade to a package that suits your needs.</p></div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="220">
+        <div class="faq-question" role="button" aria-expanded="false">
+          Will I get lessons on risk management?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer"><p>Yes. Risk and money management is an important part of our learning programs.</p></div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="240">
+        <div class="faq-question" role="button" aria-expanded="false">
+          How do I contact Stock Trading?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer"><p>Visit the <a href="contact.html">Contact Us</a> page, fill in the form, or message us on WhatsApp at <a href="https://wa.me/911234567890">+91 12345 67890</a>.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <h3>Stock <span>Trading</span></h3>
+        <p>Stock Trading is an educational platform helping learners understand the stock market through structured lessons, practical guidance, and disciplined learning.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="https://wa.me/911234567890" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank">W</a>
+          <a href="mailto:info@stockmarket.in" aria-label="Email">✉</a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="pricing.html">Pricing Plan</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ's</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="risk-disclosure.html">Risk Disclosure</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">📞</div>
+          <div class="footer-contact-text"><a href="tel:+911234567890">+91 12345 67890</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">✉</div>
+          <div class="footer-contact-text"><a href="mailto:info@stockmarket.in">info@stockmarket.in</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">📍</div>
+          <div class="footer-contact-text">Vashi, Navi Mumbai,<br>Maharashtra 400703</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 Stock Trading. All Rights Reserved.</p>
+      <p class="footer-disclaimer">⚠️ Investments in the securities market are subject to market risks. Read all related documents carefully before investing.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
