@@ -323,3 +323,112 @@ document.querySelectorAll('.pricing-card').forEach(card => {
     card.style.transform = card.classList.contains('featured') ? 'scale(1.04)' : '';
   });
 });
+
+// ============================================================
+// TESTIMONIALS CAROUSEL (Auto 1 by 1 every 4 seconds)
+// ============================================================
+(function initTestimonialsCarousel() {
+  const track = document.getElementById('testimonial-track');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.testimonial-slide');
+  const prevBtn = document.getElementById('testimonial-prev-btn');
+  const nextBtn = document.getElementById('testimonial-next-btn');
+  const dotsContainer = document.getElementById('testimonial-dots');
+  const dots = dotsContainer ? dotsContainer.querySelectorAll('.carousel-dot') : [];
+  const totalSlides = slides.length;
+  if (totalSlides === 0) return;
+
+  let currentIndex = 0;
+  let autoTimer = null;
+  const INTERVAL_MS = 4000; // Auto-play every 4 seconds
+
+  function updateCarousel(index) {
+    currentIndex = (index + totalSlides) % totalSlides;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    dots.forEach((dot, idx) => {
+      if (idx === currentIndex) {
+        dot.classList.add('active');
+        dot.setAttribute('aria-selected', 'true');
+      } else {
+        dot.classList.remove('active');
+        dot.setAttribute('aria-selected', 'false');
+      }
+    });
+  }
+
+  function nextSlide() {
+    updateCarousel(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    updateCarousel(currentIndex - 1);
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    autoTimer = setInterval(nextSlide, INTERVAL_MS);
+  }
+
+  function stopAutoPlay() {
+    if (autoTimer) {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  }
+
+  // Next / Prev Button clicks
+  nextBtn?.addEventListener('click', () => {
+    nextSlide();
+    startAutoPlay();
+  });
+
+  prevBtn?.addEventListener('click', () => {
+    prevSlide();
+    startAutoPlay();
+  });
+
+  // Dots click
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const targetIndex = parseInt(dot.dataset.index, 10);
+      if (!isNaN(targetIndex)) {
+        updateCarousel(targetIndex);
+        startAutoPlay();
+      }
+    });
+  });
+
+  // Pause on hover, resume on leave
+  const wrapper = track.closest('.testimonial-carousel-wrapper');
+  if (wrapper) {
+    wrapper.addEventListener('mouseenter', stopAutoPlay);
+    wrapper.addEventListener('mouseleave', startAutoPlay);
+    wrapper.addEventListener('focusin', stopAutoPlay);
+    wrapper.addEventListener('focusout', startAutoPlay);
+  }
+
+  // Touch Swipe for mobile/tablet
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stopAutoPlay();
+  }, { passive: true });
+
+  track.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 45) {
+      if (diff > 0) nextSlide();
+      else prevSlide();
+    }
+    startAutoPlay();
+  }, { passive: true });
+
+  // Initialize
+  updateCarousel(0);
+  startAutoPlay();
+})();
